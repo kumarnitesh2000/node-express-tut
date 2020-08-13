@@ -1,11 +1,17 @@
 const express = require('express');
-const mongoose  = require('mongoose');
-const bodyParser = require('body-parser');
+//const mongoose  = require('mongoose');
+//const bodyParser = require('body-parser');
 const app = express();
-const cors = require('cors');
+//const cors = require('cors');
 
-// TODO Code here 
-console.log("tutorial of JWT");
+// Import Routes 
+const authRoutes  = require('./Routes/auth');
+
+//route middlewares
+app.use('/api/user',authRoutes);
+
+
+
 
 
 
